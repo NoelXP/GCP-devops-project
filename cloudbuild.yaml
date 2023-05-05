@@ -1,5 +1,16 @@
 steps:
-- name: 'docker'
-  args: ['build','-t','gcr.io/$PROJECT_ID/gcpdevops','.']
-images:
-- 'gcr.io/$PROJECT_ID/gcpdevops'
+  # build the container image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["build","-t","gcr.io/$PROJECT_ID/gcpdevops","."]
+  # push container image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["push","gcr.io/$PROJECT_ID/gcpdevops"]
+  # deploy container image to GKE
+- name: "gcr.io/cloud-builders/dgke-deploy"
+  args: 
+  - run
+  - --filename=gke.yaml
+  - --location=us-central-c
+  - --cluster=gke-gcp-devops
+  - --namespace=gcp-devops-prod
+
