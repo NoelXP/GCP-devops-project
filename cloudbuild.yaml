@@ -11,6 +11,6 @@ steps:
   - run
   - --filename=gke.yaml
   - --location=us-central1-c
-  - --cluster=gke-gcp-devops
+  - --cluster=autopilot-cluster-1
   - --namespace=gcp-devops-prod
 
