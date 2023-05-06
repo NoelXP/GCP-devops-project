@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: gcp-devops-gke
-        image: gcr.io/gcp-devops-project/gcpdevops:latest
+        image: gcr.io/endless-bank-358608/gcpdevops:latest
         ports:
         - containerPort: 5000
         env:
