@@ -15,10 +15,10 @@ spec:
       containers:
       - name: gcp-devops-gke
         image: gcr.io/endless-bank-358608/gcpdevops:latest
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+        # resources:
+        #   limits:
+        #     memory: "128Mi"
+        #     cpu: "500m"
         ports:
         - containerPort: 5000
         env:
