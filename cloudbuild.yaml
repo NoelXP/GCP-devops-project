@@ -10,7 +10,7 @@ steps:
   args: 
   - run
   - --filename=gke.yaml
-  - --location=us-central-c
+  - --location=us-central1-c
   - --cluster=gke-gcp-devops
   - --namespace=gcp-devops-prod
 
