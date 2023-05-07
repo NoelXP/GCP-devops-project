@@ -15,4 +15,3 @@ steps:
   - --cluster=gcp-devops-project
   - --namespace=gcp-devops-dev
 
-# Trying to trigger a build from a push to the developer branch
