@@ -15,10 +15,10 @@ spec:
       containers:
       - name: gcp-devops-gke
         image: gcr.io/endless-bank-358608/gcpdevops:latest
-        # resources:
-        #   limits:
-        #     memory: "128Mi"
-        #     cpu: "500m"
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
         ports:
         - containerPort: 5000
         env:
@@ -30,7 +30,7 @@ apiVersion: "v1"
 kind: "Service"
 metadata:
   name: "gcp-devops-gke-service"
-  namespace: "gcp-devops-prod"
+  namespace: "gcp-devops-dev"
   labels:
     app.kubernetes.io/managed-by: "gcp-cloud-build-deploy"
 spec:
