@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: gcp-devops-gke
-        image: gcr.io/endless-bank-358608/gcpdevops:latest
+        image: gcr.io/endless-bank-358608/gcpdevops-dev:latest
         resources:
           limits:
             memory: "128Mi"
